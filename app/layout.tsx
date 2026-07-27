@@ -13,41 +13,96 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Xóa Nền Ảnh Online",
-  description:
-    "Xóa nền ảnh miễn phí bằng AI. Tách nền nhanh, không watermark, chất lượng cao.",
+  metadataBase: new URL("https://xoanenanh.io.vn"),
 
-  metadataBase: new URL("https://tenmiencuaban.com"),
+  title: {
+    default: "Xóa Nền Ảnh AI Miễn Phí Online | xoanenanh.io.vn",
+    template: "%s | xoanenanh.io.vn",
+  },
+
+  description:
+    "Xóa nền ảnh miễn phí bằng AI chỉ trong vài giây. Hỗ trợ PNG, JPG, WEBP. Không cần đăng ký, không watermark, xử lý trực tiếp trên trình duyệt.",
+
+  keywords: [
+    "xóa nền ảnh",
+    "xóa background ảnh",
+    "xóa nền ảnh online",
+    "AI xóa nền",
+    "tách nền ảnh",
+    "remove background",
+    "background remover",
+    "transparent png",
+    "xóa phông ảnh",
+    "remove bg",
+    "xóa nền miễn phí",
+  ],
+
+  authors: [
+    {
+      name: "xoanenanh.io.vn",
+      url: "https://xoanenanh.io.vn",
+    },
+  ],
+
+  creator: "xoanenanh.io.vn",
+
+  publisher: "xoanenanh.io.vn",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://xoanenanh.io.vn",
+  },
 
   openGraph: {
-    title: "Xóa Nền Ảnh Online",
+    type: "website",
+    locale: "vi_VN",
+    url: "https://xoanenanh.io.vn",
+    siteName: "Xóa Nền Ảnh AI",
+
+    title: "Xóa Nền Ảnh AI Miễn Phí Online",
+
     description:
-      "Xóa nền ảnh miễn phí bằng AI. Chỉ vài giây là có ảnh PNG nền trong suốt.",
-
-    url: "https://tenmiencuaban.com",
-
-    siteName: "Xóa Nền Ảnh Online",
+      "Xóa nền ảnh bằng AI chỉ trong vài giây. Miễn phí, không watermark, không cần đăng ký.",
 
     images: [
       {
-        url: "/logo1.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Xóa Nền Ảnh Online",
+        alt: "Xóa Nền Ảnh AI",
       },
     ],
-
-    locale: "vi_VN",
-    type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Xóa Nền Ảnh Online",
+
+    title: "Xóa Nền Ảnh AI Miễn Phí",
+
     description:
-      "Xóa nền ảnh miễn phí bằng AI.",
+      "Xóa nền ảnh online miễn phí bằng AI. Hỗ trợ PNG, JPG, WEBP.",
 
     images: ["/og-image.png"],
+  },
+
+  category: "technology",
+
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 };
 
@@ -57,11 +112,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="vi">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
