@@ -156,7 +156,7 @@ export default function Footer() {
             <p className="text-sm text-slate-400">
               Made with ❤️ by{" "}
               <span className="font-semibold text-blue-600 hover:text-blue-700 transition-colors">
-                Tri Nguyen
+                Trí Nguyễn
               </span>
             </p>
           </div>
