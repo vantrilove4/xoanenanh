@@ -6,8 +6,16 @@ import ActionPanel from "./ActionPanel";
 
 import { useImage } from "@/hooks/useImage";
 import { removeBg } from "@/lib/removeBackground";
+import { useEffect } from "react";
 
 export default function Workspace() {
+  useEffect(() => {
+  fetch("/api/visit", {
+    method: "POST",
+  });
+}, []);
+
+
   const {
     file,
     original,
