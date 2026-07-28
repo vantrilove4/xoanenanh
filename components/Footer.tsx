@@ -50,6 +50,18 @@ export default function Footer() {
               Nam. AI xử lý trực tiếp trên trình duyệt giúp bảo vệ quyền riêng tư
               và không cần tải ảnh lên máy chủ để xử lý.
             </p>
+            <p className="mt-4 leading-7 text-slate-600">
+  Cần tạo mã QR? Hãy thử{" "}
+  <a
+    href="https://qrfree.io.vn"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+  >
+    QRFree.io.vn
+  </a>{" "}
+  – công cụ tạo mã QR miễn phí hỗ trợ URL, WiFi, vCard, PDF và nhiều định dạng khác.
+</p>
           </div>
 
           {/* Cam kết */}
