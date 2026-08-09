@@ -22,11 +22,10 @@ export default function Navbar() {
         </div>
 
         <a
-          href="#"
+          href="/blog"
           className="flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2 text-sm font-medium transition hover:bg-slate-100"
         >
-          
-         
+          Blog
         </a>
       </div>
     </header>
