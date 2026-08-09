@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xoanenanh.io.vn"),
+  
 
   title: {
-    default: "Xóa Nền Ảnh AI Miễn Phí Online | xoanenanh.io.vn",
+    default: "Xóa Nền Ảnh Online Miễn Phí bằng AI | Xoanenanh",
     template: "%s | xoanenanh.io.vn",
   },
 
