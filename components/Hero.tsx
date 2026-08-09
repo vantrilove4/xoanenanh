@@ -8,7 +8,7 @@ export default function Hero() {
       </span>
 
       <h1 className="mt-8 text-5xl font-tahoma  tracking-tight text-slate-900 md:text-6xl">
-        Xóa nền ảnh miễn phí
+        Xóa Nền Ảnh Online Miễn Phí
         <br />
         
       </h1>

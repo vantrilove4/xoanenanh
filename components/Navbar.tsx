@@ -11,9 +11,9 @@ export default function Navbar() {
           </div>
 
           <div>
-            <h1 className="text-lg font-bold text-slate-900">
+            <h2 className="text-lg font-bold text-slate-900">
               Xóa Nền Ảnh Online
-            </h1>
+            </h2>
 
             <p className="text-xs text-slate-500">
               Xóa nền ảnh miễn phí

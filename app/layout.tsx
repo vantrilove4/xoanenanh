@@ -113,11 +113,33 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Xóa Nền Ảnh Online",
+    url: "https://xoanenanh.io.vn/",
+    description:
+      "Công cụ xóa nền ảnh online miễn phí bằng AI. Hỗ trợ PNG, JPG và WEBP.",
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "Web",
+    browserRequirements: "Requires JavaScript",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "VND",
+    },
+  };
+
   return (
     <html lang="vi">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50`}
-      >
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
+
         {children}
       </body>
     </html>
