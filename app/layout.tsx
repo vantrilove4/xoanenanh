@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,7 +16,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://xoanenanh.io.vn"),
-  
 
   title: {
     default: "Xóa Nền Ảnh Online Miễn Phí bằng AI | Xoanenanh",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
   ],
 
   creator: "xoanenanh.io.vn",
-
   publisher: "xoanenanh.io.vn",
 
   robots: {
     index: true,
     follow: true,
     nocache: false,
+
     googleBot: {
       index: true,
       follow: true,
@@ -123,6 +123,7 @@ export default function RootLayout({
     applicationCategory: "MultimediaApplication",
     operatingSystem: "Web",
     browserRequirements: "Requires JavaScript",
+
     offers: {
       "@type": "Offer",
       price: "0",
@@ -132,7 +133,10 @@ export default function RootLayout({
 
   return (
     <html lang="vi">
-      <body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -140,7 +144,26 @@ export default function RootLayout({
           }}
         />
 
+        {/* Google Analytics 4 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EE8LTNJH9H"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-EE8LTNJH9H');
+          `}
+        </Script>
+
         {children}
+
+        {/* Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   );
