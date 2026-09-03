@@ -62,6 +62,19 @@ export default function Footer() {
   </a>{" "}
   – công cụ tạo mã QR miễn phí hỗ trợ URL, WiFi, vCard, PDF và nhiều định dạng khác.
 </p>
+
+<p className="mt-4 leading-7 text-slate-600">
+  Cần xử lý file PDF? Hãy thử{" "}
+  <a
+    href="https://vietdocs.io.vn"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+  >
+    vietdocs.io.vn
+  </a>{" "}
+  – VietDocs – Công cụ xử lý tài liệu trực tuyến, hỗ trợ các nhu cầu làm việc với PDF, Word và nhiều định dạng tài liệu khác.
+</p>
           </div>
 
           {/* Cam kết */}

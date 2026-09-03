@@ -161,8 +161,9 @@ export default function RootLayout({
         </Script>
 
         {children}
-
+          
         {/* Vercel Analytics */}
+        
         <Analytics />
       </body>
     </html>
